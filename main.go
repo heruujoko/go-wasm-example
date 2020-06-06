@@ -29,7 +29,7 @@ func intensiveTask(this js.Value, i []js.Value) interface{} {
 	for i := math.Pow(baseNumber, 7); i >= 0; i-- {
 		result += math.Atan(i) * math.Tan(i)
 	}
-	return result
+	return js.ValueOf(result)
 }
 
 // expose function to JS runtime

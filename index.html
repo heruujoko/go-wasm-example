@@ -56,6 +56,7 @@ license that can be found in the LICENSE file.
           result += Math.atan(i) * Math.tan(i);
         }
         var t1 = performance.now();
+        console.log(result);
         console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
         return result;
       }
@@ -64,12 +65,13 @@ license that can be found in the LICENSE file.
         var t0 = performance.now();
         result = intensiveTask(baseNumber);
         var t1 = performance.now();
+        console.log(result);
         console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
         return result;
       }
     </script>
 
-    <button onClick="intensiveGO(10);" id="runButton" disabled>GO Process</button>
-    <button onClick="intensiveJS(10);" id="runButtonJS">JS Process</button>
+    <button onClick="intensiveGO(12);" id="runButton" disabled>GO Process</button>
+    <button onClick="intensiveJS(12);" id="runButtonJS">JS Process</button>
   </body>
 </html>
